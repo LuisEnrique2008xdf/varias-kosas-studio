@@ -20,6 +20,6 @@ export function guardarUsuario() {
 }
 
 export function buscarUsuario(correo, contrasena) {
-    let auth = usuarios.some((usuario) => correo == usuario.correo && contrasena == usuario.contrasena) 
+    let auth = usuarios.find((usuario) => correo == usuario.correo && contrasena == usuario.contrasena) 
     return auth
 }
