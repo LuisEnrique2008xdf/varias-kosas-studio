@@ -1,6 +1,6 @@
 import { getlocalStorage, removeLocalStorage } from "../helpers/local-storage.js";
 import { generalAlert } from "../helpers/alerts.js";
-import { kosas, guardarKosas } from "../models/CosasModel.js";
+import { kosas, guardarKosa } from "../models/CosasModel.js";
 
 let token = getlocalStorage("token")
 if (!token){
@@ -26,6 +26,6 @@ document.querySelector("#btn-agregar-kosa").addEventListener("click",()=>{
     let foto_producto = document.querySelector("#foto-producto").value
     let kosa ={nombre_producto, precio, categoria, materiales, dimensiones, stock, descripcion, foto_producto}
     kosas.push(kosa)
-    guardarKosas("kosas", kosas)
-    generalAlert("Registro exitoso", "se guardo la kosa")
+    guardarKosa("kosas", kosas)
+    generalAlert("Registro exitoso", "se guardo la kosa base de datos", "success")
 })
