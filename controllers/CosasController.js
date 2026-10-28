@@ -1,11 +1,11 @@
-import { getolocalStorage, removeLocalStorage } from "../helpers/local-storage.js";
+import { getlocalStorage, removeLocalStorage } from "../helpers/local-storage.js";
 import { generalAlert } from "../helpers/alerts.js";
 
-let token = getolocalStorage("token")
+let token = getlocalStorage("token")
 if (!token){
     window.location.href = "/index.html"
 }
-let usuario = getolocalStorage("usuario")
+let usuario = getlocalStorage("usuario")
 
 document.querySelector("#info-usuario").textContent = "USUARIO: " + usuario.nombre
 document.querySelector("#btn-salir").addEventListener("click", function () {

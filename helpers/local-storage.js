@@ -1,4 +1,4 @@
-export function getolocalStorage(key) {
+export function getlocalStorage(key) {
      return JSON.parse(localStorage.getItem(key))
 }
 
